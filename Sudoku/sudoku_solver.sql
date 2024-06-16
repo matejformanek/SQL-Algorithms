@@ -1,6 +1,6 @@
 WITH x(board, curr) AS
-         (SELECT $board,
-                 INSTR($board, '.')
+         (SELECT :board,
+                 INSTR(:board, '.')
           FROM dual
           UNION ALL
           (SELECT CAST((SUBSTR(board, 1, curr - 1) || digit ||
@@ -28,8 +28,8 @@ WHERE curr = 0;
 
 -- Using JOIN ON NOT EXISTS
 WITH x(board, curr) AS
-         (SELECT $board,
-                 INSTR($board, '.')
+         (SELECT :board,
+                 INSTR(:board, '.')
           FROM dual
           UNION ALL
           (SELECT CAST((SUBSTR(board, 1, curr - 1) || digit ||
