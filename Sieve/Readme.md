@@ -1,4 +1,4 @@
-# Sieve of Eratosthenes
+# Sieve of Eratosthenes (PostgreSQL)
 
 Algorithm for finding all prime numbers that are smaller than given :n
 
